@@ -3,7 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from random import randint
-
+from mailpassword import mailkey
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ otp = randint(100000, 999999)
 def send_otp(email):
     sender_email = 'slayz9168@gmail.com'
     receiver_email = email
-    password = 'hfcu cual pbge oaxl'
+    password = mailkey
 
     message = MIMEMultipart()
     message['From'] = sender_email
